@@ -1,0 +1,16 @@
+node_modules/
+images/
+.git/
+
+.dockerignore
+Dockerfile
+
+.gitignore
+.env
+.env.example
+.eslintrc
+.eslintignore
+.editorconfig
+
+LICENSE.md
+README.md
