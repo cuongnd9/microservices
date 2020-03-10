@@ -1,13 +1,19 @@
-FROM node:12-alpine
+FROM node:12
 
-COPY . .
+RUN mkdir /app
+WORKDIR /app
 
-RUN yarn install
+COPY package.json /app
+COPY yarn.lock /app
+
+RUN yarn
+
+COPY . /app
 
 ENV NODE_ENV=production
 
 RUN yarn build
 
-EXPOSE 9000
+EXPOSE 7000
 
 CMD ["yarn", "start"]
